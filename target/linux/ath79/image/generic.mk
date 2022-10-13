@@ -998,6 +998,17 @@ define Device/dlink_dir-505
 endef
 TARGET_DEVICES += dlink_dir-505
 
+define Device/dlink_dir-632
+  SOC := ar9330
+  DEVICE_VENDOR := D-Link
+  DEVICE_MODEL := DIR-632
+  DEVICE_VARIANT := A1
+  IMAGE_SIZE := 7680k
+  DEVICE_PACKAGES := kmod-usb-chipidea2
+  SUPPORTED_DEVICES += dir-632-a1
+endef
+TARGET_DEVICES += dlink_dir-632
+
 define Device/dlink_dir-825-b1
   SOC := ar7161
   DEVICE_VENDOR := D-Link

@@ -1569,6 +1569,18 @@ define Device/sercomm_na502s
 endef
 TARGET_DEVICES += sercomm_na502s
 
+define Device/snr_snr-cpe-me2-sfp
+  $(Device/dsa-migration)
+  $(Device/uimage-lzma-loader)
+  IMAGE_SIZE := 16064k
+  DEVICE_VENDOR := SNR
+  DEVICE_MODEL := SNR-CPE-ME2-SFP
+  UIMAGE_NAME := $$(DEVICE_MODEL)
+  DEVICE_PACKAGES := kmod-mt7615e kmod-mt7615-firmware kmod-usb3 \
+	    kmod-sfp kmod-usb-ledtrig-usbport uboot-envtools
+endef
+TARGET_DEVICES += snr_snr-cpe-me2-sfp
+
 define Device/storylink_sap-g3200u3
   $(Device/dsa-migration)
   IMAGE_SIZE := 7872k

@@ -1,0 +1,21 @@
+--- a/arch/arm/boot/dts/broadcom/bcm4708-linksys-ea6500-v2.dts	2025-05-11 13:46:21.493121525 +0800
++++ b/arch/arm/boot/dts/broadcom/bcm4708-linksys-ea6500-v2.dts	2025-05-11 13:47:48.857103697 +0800
+@@ -38,6 +38,18 @@
+ 			gpios = <&chipcommon 11 GPIO_ACTIVE_LOW>;
+ 		};
+ 	};
++
++	bcm4360-sprom {
++		compatible = "brcm,bcma-sprom";
++
++		pci-bus = <2>;
++		pci-dev = <0>;
++
++		//nvmem-cells = <&macaddr_cferom_6a0 1>;
++		//nvmem-cell-names = "mac-address";
++
++		brcm,sprom = "brcm/bcm4360-sprom.bin";
++	};
+ };
+ 
+ &usb3_phy {

@@ -319,7 +319,7 @@ define Device/linksys_ea6500-v2
   DEVICE_VENDOR := Linksys
   DEVICE_MODEL := EA6500
   DEVICE_VARIANT := v2
-  DEVICE_PACKAGES := $(B43) $(USB3_PACKAGES)
+  DEVICE_PACKAGES := $(B43) $(USB3_PACKAGES) broadcom-4360-sprom
 endef
 TARGET_DEVICES += linksys_ea6500-v2
 
